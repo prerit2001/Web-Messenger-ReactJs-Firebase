@@ -1,0 +1,50 @@
+.header{
+    width: 100%;
+    position: relative;
+    height: 60px;
+    display: flex;
+    background: black;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.logo{
+    font-size: 25px;
+    color: red;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 18px;
+    text-shadow: 0 0;
+}
+
+.menu{
+    display: flex;
+    margin: 20px;
+}
+
+.menu > li > a{
+    color: red;
+    font-weight: bold;
+    text-shadow: 0 0;
+    text-decoration: none;
+}
+
+.leftMenu{
+    display: flex; 
+    color: royalblue; 
+    margin: 20px;
+    font-weight: bold;
+}
+
+.leftMenu > li{
+    margin: 0 10px;
+}
+
+.leftMenu > li > a{
+    color: darkturquoise;
+    font-weight: bold;
+}
+
+.leftMenu > li > a.active{
+    font-weight: bold;
+}

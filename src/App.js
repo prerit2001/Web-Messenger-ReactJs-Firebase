@@ -1,24 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './containers/HomePage';
+import LoginPage from './containers/LoginPage';
+import RegisterPage from './containers/RegisterPage';
+import PrivateRoute from './components/PrivateRoute';
+import { isLoggedInUser } from './actions';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
+  
+  const auth = useSelector(state => state.auth)
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    if(!auth.authenticated){
+      dispatch(isLoggedInUser());
+    }
+   }, []);  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Router>
+          {/* For Logged in user */}
+          <PrivateRoute path="/" exact component={HomePage}/>
+
+          <Route path="/login" component={LoginPage}/>
+          <Route path="/signup" component={RegisterPage}/>
+        </Router>
     </div>
   );
 }
