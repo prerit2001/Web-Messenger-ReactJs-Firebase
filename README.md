@@ -1,4 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Web Application
+
+## Hosted at URL -- ( https://web-messanger-381d9.web.app/login ) @ Check It Out
+
+<img src="screenshot.jpeg"  width="900" height="500" /> 
+
+### For Running in Local System
+<pre>
+First Clone the Repository 
+In the Repository Folder open terminal 
+install react packages one by one using search in the url https://www.npmjs.com/package/react
+</pre>  
+  <pre> 
+    1. "firebase": "^7.19.0",
+    2. "react": "^16.13.1",
+    3. "react-dom": "^16.13.1",
+    4. "react-redux": "^7.2.1",
+    5. "react-router-dom": "^5.2.0",
+    6. "react-scripts": "3.4.3",
+    7. "redux": "^4.0.5",
+    8. "redux-thunk": "^2.3.0"
+  </pre>
+You can see the package.json for more information
 
 ## Available Scripts
 
